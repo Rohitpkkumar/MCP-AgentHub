@@ -1,0 +1,46 @@
+.toggle-container {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.toggle-container button {
+  @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+  font-family: "Space Mono", monospace;
+  padding: 10px 22px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #1e3a8a;
+  color: white;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glowing Wave Background */
+.toggle-container button::before {
+  content: "";
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, #60a5fa44, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.toggle-container button:hover::before {
+  transform: scale(1.5);
+}
+
+.toggle-container button.active {
+  background: #3b82f6;
+  border-color: #93c5fd;
+  box-shadow: 0 0 12px #60a5fa;
+}

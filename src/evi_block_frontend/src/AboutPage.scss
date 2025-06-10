@@ -1,0 +1,121 @@
+/* AboutPage.scss */
+.about-page {
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    color: #111f55;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .scroll-down {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2452ff;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
+  .team-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .team-card {
+    background: #f0f6ff;
+    border: 1px solid #111f55;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 260px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #2452ff;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #111f55;
+    }
+
+    .role {
+      font-weight: 600;
+      color: #2452ff;
+      margin-top: 0.5rem;
+    }
+
+    .desc {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .social-links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+
+      a {
+        color: #111f55;
+        font-size: 1.3rem;
+        transition: color 0.25s ease;
+
+        &:hover {
+          color: #2452ff;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  // Responsive tweaks
+  @media (max-width: 600px) {
+    .team-card {
+      max-width: 90%;
+    }
+
+    .scroll-down {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "evi_block_backend": {
+      "candid": "src/evi_block_backend/evi_block_backend.did",
+      "package": "evi_block_backend",
+      "type": "rust"
+    },
+    "evi_block_frontend": {
+      "dependencies": [
+        "evi_block_backend"
+      ],
+      "source": [
+        "src/evi_block_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "evi_block_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

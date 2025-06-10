@@ -1,0 +1,5 @@
+service : {
+  upload_evidence: (text, text, text, nat64) -> (text);
+  verify_evidence: (text, text) -> (text) query;
+  get_all_evidence: () -> (vec record { text; text; text; nat64 }) query;
+}
