@@ -1,5 +1,4 @@
 <h1 align="center">
-  <img src="src/mcp_agenthub_frontend/public/MCPAgentHubLogo.svg" alt="MCP-AgentHub Logo" height="100"><br>
   <strong>MCP-AGENTHUB</strong>
 </h1>
 
@@ -55,7 +54,7 @@ To explore or build on `mcp_agenthub`, check the official ICP developer resource
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/mcp-agenthub.git
+git clone https://github.com/Rohitpkkumar/mcp-agenthub.git
 cd mcp-agenthub
 ```
 # Start local replica
