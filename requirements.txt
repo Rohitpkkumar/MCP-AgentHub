@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+httpx
+requests
+ic-py
+pynacl
+chromadb
+openai
+pydantic

@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base: White */
+    --background: 0 0% 100%;
+    /* Text: Charcoal #222 */
+    --foreground: 0 0% 13%;
+
+    /* Card: White with slight transparency for glass effect */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+
+    /* Popover: White */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+
+    /* Primary: Pastel Blue #DFF6FF (HSL approx 197, 100%, 94%) - using a slightly darker blue for text/buttons to be visible */
+    /* Actually for buttons we want a bit more pop. Let's use a soft blue-purple */
+    --primary: 250 90% 65%;
+    /* Soft Indigo */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Pastel Purple #F3E8FF */
+    --secondary: 268 100% 95%;
+    --secondary-foreground: 268 40% 20%;
+
+    /* Muted: Light Gray */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Accent: Pastel Peach #FFE6D6 */
+    --accent: 24 100% 92%;
+    --accent-foreground: 24 40% 20%;
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Border */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 250 90% 65%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* We are prioritizing light mode, but keeping dark mode variables just in case, mapped to a "Midnight" theme */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    /* Soft mesh gradient background */
+    background-image: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+    background-image: radial-gradient(at 0% 0%, #DFF6FF 0, transparent 50%), radial-gradient(at 50% 100%, #F3E8FF 0, transparent 50%), radial-gradient(at 100% 0%, #FFE6D6 0, transparent 50%);
+    background-attachment: fixed;
+  }
+}

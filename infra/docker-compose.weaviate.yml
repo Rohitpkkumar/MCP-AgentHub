@@ -1,0 +1,26 @@
+services:
+  weaviate:
+    image: cr.weaviate.io/semitechnologies/weaviate:1.24.10
+    container_name: weaviate
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      QUERY_DEFAULTS_LIMIT: "20"
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "true"
+
+      # disable all vectorizers
+      DEFAULT_VECTORIZER_MODULE: "none"
+      ENABLE_MODULES: ""
+
+      # absolutely required to avoid startup crash
+      TRANSFORMERS_INFERENCE_API: "disabled"
+
+      # persistence
+      PERSISTENCE_DATA_PATH: "/var/lib/weaviate"
+
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+
+volumes:
+  weaviate_data:
