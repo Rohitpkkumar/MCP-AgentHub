@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Rust tests
-        run: cd canisters/registery && cargo test
+        run: cd canisters/registry && cargo test
       - name: Python orchestrator tests
         run: cd orchestrator && pytest || true
       - name: MCP server tests
