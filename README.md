@@ -20,7 +20,7 @@ Nexus is a decentralized multi-agent system built on the **Model Context Protoco
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/MCP_Agent_Hub.git
+    git clone https://github.com/rohitpkkumar/MCP_Agent_Hub.git
     cd MCP_Agent_Hub
     ```
 
