@@ -1,5 +1,0 @@
-[workspace]
-members = [
-    "src/evi_block_backend"
-]
-resolver = "2"
