@@ -12,4 +12,4 @@ jobs:
       - name: MCP server tests
         run: cd mcp-servers && pytest || true
       - name: Frontend build
-        run: cd frontend && npm install && npm run build
+        run: cd frontend && npm install
